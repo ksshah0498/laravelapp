@@ -13,5 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\PageController::class,'homepage']);
+Route::get('/', [\App\Http\Controllers\UserController::class,'showcorrecthomepage']);
 Route::get('/about', [\App\Http\Controllers\PageController::class,'aboutpage']);
+Route::post('/register',[\App\Http\Controllers\UserController::class ,'register']);
+Route::post('/login',[\App\Http\Controllers\UserController::class,'login']);
+Route::post('/logout',[\App\Http\Controllers\UserController::class,'logout']);
